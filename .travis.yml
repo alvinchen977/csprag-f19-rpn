@@ -1,5 +1,4 @@
 language: python
-python:
+python3:
  - 3.5
- - python3
 script: pytest
