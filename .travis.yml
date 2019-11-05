@@ -1,7 +1,9 @@
 language: python
 python: 3.5
-install: pip install coverage
+install:
+ - pip3 install coverage
+ - pip3 install pytest pytest-cov
 script:
- - pytest
- - coverage run test_rpn.py
- - coverage report
+ - pytest --cov=./
+ - python3 -m coverage run test_rpn.py
+ - python3 -m coverage report
